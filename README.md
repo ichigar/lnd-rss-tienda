@@ -27,7 +27,6 @@ Partimos de la siguiente estructura de archivos para nuestro proyecto:
 /tienda_regalos
 ├── css
 │   └── styles.css
-├── feed
 ├── images
 │   ├── caja-suenos.jpg
 │   └── reloj-eterno.jpg
