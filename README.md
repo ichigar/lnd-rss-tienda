@@ -65,3 +65,78 @@ Partimos de la siguiente estructura de archivos para nuestro proyecto:
 
 La web de prueba estará alojada en `neocities.org` la URL base de la misma sera <https://ichigar.neocities.org/tienda-regalos>
 
+## 2. Feed del proyecto
+
+Queremos que los usuarios de la web se puedan suscribir por RSS a la misma de forma que estén informados de los nuevos productos que se añadan a la tienda. Un fichero básico de RSS tiene la siguiente estructura:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Ejemplo de Feed RSS</title>
+    <link>https://www.ejemplo.com</link>
+    <description>Últimas noticias y actualizaciones</description>
+    
+    <item>
+      <title>Primera noticia</title>
+      <link>https://www.ejemplo.com/noticia1</link>
+      <description>Descripción breve de la noticia</description>
+      <pubDate>Fri, 28 Feb 2025 12:00:00 GMT</pubDate>
+    </item>
+
+    <item>
+      <title>Segunda noticia</title>
+      <link>https://www.ejemplo.com/noticia2</link>
+      <description>Descripción breve de la segunda noticia</description>
+      <pubDate>Fri, 28 Feb 2025 14:00:00 GMT</pubDate>
+    </item>
+
+  </channel>
+</rss>
+```
+
+Siguiendo la estructura anterior añadimos a la estructura de nuestro proyecto la subcarpeta `feed` en la que se alojará el fichero `rss.xml` con los datos de la web y de los dos productos actuales de la misma:
+
+```bash
+/tienda_regalos
+├── css
+│   └── styles.css
+├── feed
+│   ├── rss.xml
+├── images
+│   ├── caja-suenos.jpg
+│   └── reloj-eterno.jpg
+├── index.html
+└── regalos
+    ├── caja-de-los-suenos.html
+    └── reloj-tiempo-eterno.html
+```
+
+Teniendo en cuenta que la URL inicial en la que se aloja el proyecto es <https://usuario.neocities.org/tienda-regalos> el fichero `rss.xml` tendrá el siguiente contenido:
+
+```xml
+?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Tienda de regalos mágicos</title>
+        <link>https://ichigar.neocities.org/tienda-regalos/feed/rss.xml</link>
+        <description>Últimos productos disponibles en nuestra tienda de regalos mágicos.</description>
+        
+        <item>
+            <title>Caja de los Sueños</title>
+            <link>https://ichigar.neocities.org/tienda-regalos/regalos/caja-de-los-suenos.html</link>
+            <description>Una caja misteriosa llena de pequeños obsequios encantadores.</description>
+            <pubDate>Fri, 28 Feb 2025 10:00:00 GMT</pubDate>
+        </item>
+
+        <item>
+            <title>Reloj del Tiempo Eterno</title>
+            <link>https://ichigar.neocities.org/tienda-regalos/regalos/reloj-tiempo-eterno.html</link>
+            <description>Un elegante reloj con un diseño clásico y una historia fascinante.</description>
+            <pubDate>Fri, 28 Feb 2025 09:30:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>
+```
+
+Una vez añadido el fichero anterior nos podremos suscribir a las novedades de productos de la tienda desde cualquier cliente de RSS introduciendo la dirección: <https://ichigar.neocities.org/tienda-regalos/feed/rss.xml>
