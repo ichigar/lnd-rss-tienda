@@ -37,3 +37,4 @@ Partimos de la siguiente estructura de archivos para nuestro proyecto:
 ```
 
 La web de prueba estará alojada en `neocities.org` la URL base de la misma sera <https://ichigar.neocities.org/tienda-regalos>
+
