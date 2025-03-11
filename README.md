@@ -140,3 +140,51 @@ Teniendo en cuenta que la URL inicial en la que se aloja el proyecto es <https:/
 ```
 
 Una vez añadido el fichero anterior nos podremos suscribir a las novedades de productos de la tienda desde cualquier cliente de RSS introduciendo la dirección: <https://ichigar.neocities.org/tienda-regalos/feed/rss.xml>
+
+## 3. Facilitando la subscripción
+
+Con la configuración actual, para poder suscribirnos a la web debemos conocer la dirección exacta del fichero `rss.xml`. Para facilitar que los usuarios se puedan suscribir a nuestra web podemos hacerlo de varias maneras.
+
+Una es incluir en el encabezado de la web una entrada que indique la ubicación del fichero de subscripción. Modificamos `head` en `index.html` para que quede de la forma:
+
+```html
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regalos Mágicos</title>
+    <link rel="alternate" type="application/rss+xml" title="Feed RSS - Tienda de regalos" href="feed/rss.xml">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+```
+
+Con lo anterior los buscadores de RSS y algunos clientes de RSS deberían ser capaces de encontrar la ubicación del fichero `rss.xml` de nuestro sitio simplemente poniendo la dirección de la web.
+
+Otra forma de facilitar la suscripción es poner en alguna parte de la web un enlace directo al fichero `rss.xml`. Lo podemos hacer, por ejemplo incluyendo en el footer de la web un enlace directo al xml con su ubicación:
+
+```html
+<footer>
+    <p>&copy; 2025 Regalos Mágicos</p>
+    <div class="rss-subscribe">
+        <a href="feed/rss.xml">Suscribirse al RSS</a>
+    </div>
+</footer>
+```
+
+Para mejorar la apariencia añadimos lo siguiente al fichero `styles.css`:
+
+```css
+.rss-subscribe {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.rss-subscribe a {
+    display: inline-block;
+    background-color: #f8b400;
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+```
+
+Los ficheros `index.html` y `styles.css` con las modificaciones los tienes en la rama `3-facilitando-subscripcion`
