@@ -9,7 +9,7 @@ A partir de un proyecto web de una tienda de regalos de ejemplos vamos a crear e
 Para hacer el seguimiento de esta guía se van a crear una serie de ramas en el proyecto. Después de clonar el proyecto con:
 
 ```bash
-$ git clone https://github.com/ichigar/lnd-rss-tienda.git
+git clone https://github.com/ichigar/lnd-rss-tienda.git
 ```
 
 Podemos seguir los pasos del mismo cambiando a las ramas en las que se completa cada uno de los apartados con `git checkout nombre-rama`. Podemos ver las ramas del proyecto ejecutando `git branch`. Las ramas del proyecto son:
