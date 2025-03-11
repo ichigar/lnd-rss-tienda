@@ -19,6 +19,32 @@ Podemos seguir los pasos del mismo cambiando a las ramas en las que se completa 
 - `3-facilitando-subscripcion`
 - `4-validacion-rss`
 
+### Trabajando con las ramas en git y GitHub
+
+De forma genérica vamos a trabajar de la siguiente forma una vez creado y clonado el repositorio de GitHub:
+
+Crear nueva rama y entrar en ella:
+
+```bash
+git checkout -b nombre-rama
+```
+
+Hacemos modificaciones de archivos en la rama, los añadimos a la rama, hacemos commit y los subimos al repositorio remoto en Github:
+
+```bash
+git add .
+git commit -m "Descripción de modificaciones"
+git push origin nombre-rama
+```
+
+Una vez terminamos con una rama fusionamos los cambios a la rama `main` y creamos una nueva rama para el paso siguiente:
+
+```bash
+git checkout main
+git merge nombre-rama
+git checkout -b nueva-rama
+```
+
 ## 1. Estructura del proyecto
 
 Partimos de la siguiente estructura de archivos para nuestro proyecto:
