@@ -23,9 +23,10 @@ Podemos seguir los pasos del mismo cambiando a las ramas en las que se completa 
 
 De forma genérica vamos a trabajar de la siguiente forma una vez creado y clonado el repositorio de GitHub:
 
-Crear nueva rama y entrar en ella:
+Sincronizamos con el repositorio remoto, creamos nueva rama y entramos en ella:
 
 ```bash
+git pull
 git checkout -b nombre-rama
 ```
 
