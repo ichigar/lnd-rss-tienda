@@ -58,3 +58,15 @@ footer {
 footer a img {
     vertical-align: middle;
 }
+.rss-subscribe {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.rss-subscribe a {
+    display: inline-block;
+    background-color: #f8b400;
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
