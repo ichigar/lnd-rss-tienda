@@ -112,7 +112,7 @@ Siguiendo la estructura anterior añadimos a la estructura de nuestro proyecto l
     └── reloj-tiempo-eterno.html
 ```
 
-Teniendo en cuenta que la URL inicial en la que se aloja el proyecto es <https://usuario.neocities.org/tienda-regalos> el fichero `rss.xml` tendrá el siguiente contenido:
+Teniendo en cuenta que la URL inicial en la que se aloja el proyecto es <https://ichigar.neocities.org/tienda-regalos> el fichero `rss.xml` tendrá el siguiente contenido:
 
 ```xml
 ?xml version="1.0" encoding="UTF-8"?>
