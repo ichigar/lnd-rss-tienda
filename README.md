@@ -188,3 +188,40 @@ Para mejorar la apariencia añadimos lo siguiente al fichero `styles.css`:
 ```
 
 Los ficheros `index.html` y `styles.css` con las modificaciones los tienes en la rama `3-facilitando-subscripcion`
+
+## 4. Validando el fichero rss.xml
+
+Tal y cómo está definido el fichero rss.xml de nuestro sitio los clientes de RSS son capaces de leerlo y mostrar los artículos del mismo, pero si lo pasamos por herramientas de validación nos indicaran que le faltan elementos para considerarse válidos.
+
+Podemos comprobar la validez de nuestro fichero RSS en la herramienta online <https://www.feedvalidator.org/> 
+
+
+Para que `rss.xml` sea válido debemos añadir elementos de forma que quede:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <atom:link href="https://ichigar.neocities.org/tienda-regalos/feed/rss.xml" rel="self"
+            type="application/rss+xml" />
+        <title>Tienda de regalos mágicos</title>
+        <link>https://ichigar.neocities.org/tienda-regalos/feed/rss.xml</link>
+        <description>Últimos productos disponibles en nuestra tienda de regalos mágicos.</description>
+        <item>
+            <title>Caja de los Sueños</title>
+            <link>https://ichigar.neocities.org/tienda-regalos/regalos/caja-de-los-suenos.html</link>
+            <description>Una caja misteriosa llena de pequeños obsequios encantadores.</description>
+            <guid isPermaLink="false">caja-de-los-suenos</guid>
+            <pubDate>Fri, 28 Feb 2025 10:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title>Reloj del Tiempo Eterno</title>
+            <link>https://ichigar.neocities.org/tienda-regalos/regalos/reloj-tiempo-eterno.html</link>
+            <category>Regalos</category>
+            <description>Un elegante reloj con un diseño clásico y una historia fascinante.</description>
+            <guid isPermaLink="false">reloj-tiempo-eterno</guid>
+            <pubDate>Fri, 28 Feb 2025 09:30:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>
+```
