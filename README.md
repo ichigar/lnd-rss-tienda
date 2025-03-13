@@ -299,7 +299,7 @@ Al actualizar la suscripción en tu cliente de RSS debería aparecer el nuevo pr
 
 ## 6. Publicando la web en Github Pages
 
-Para publicar la web en GitHubPages en lugar de Neocities tenemos que activar GitHub Pages para el repositorio y modificar los enlaces en el archivo `rss.xml` de forma que apunten a la URL base en GitHub Pages.
+Para publicar la web en GitHubPages en lugar de Neocities tenemos que activar GitHub Pages para el repositorio en la configuración del mismo y modificar los enlaces en el archivo `rss.xml` de forma que apunten a la URL base en GitHub Pages.
 
 Como en este caso mi usuario es `ichigar`y el repositorio se llama `lnd-rss-tienda` la URL inicial de la web de la tienda será <https://ichigar.github.io/lnd-rss-tienda/>
 
