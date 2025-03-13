@@ -281,9 +281,17 @@ Su página de detalle peluche-suerte.html:
 </html>
 ```
 
-Al modificar el fichero `rss.xml` para el nuevo producto:
+Modificamos el fichero `rss.xml` para el nuevo producto añadiendo el nuevo `item`:
 
 ```xml
+        <item>
+            <title>Peluche de la suerte</title>
+            <link>https://ichigar.neocities.org/tienda-regalos/regalos/peluche-suerte.html</link>
+            <category>Regalos</category>
+            <description>Un elegante reloj con un diseño clásico y una historia fascinante.</description>
+            <guid isPermaLink="false">peluche-suerte</guid>
+            <pubDate>Fri, 28 Feb 2025 09:30:00 GMT</pubDate>
+        </item>
 ```
 
 Al actualizar la suscripción en tu cliente de RSS debería aparecer el nuevo producto
