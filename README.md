@@ -226,3 +226,64 @@ Para que `rss.xml` sea válido debemos añadir elementos de forma que quede:
     </channel>
 </rss>
 ```
+## 5. Añadiendo productos a la web
+
+Añade el siguiente producto al fichero index.html
+
+```html
+<article class="producto">
+    <a href="regalos/peluche-suerte.html">
+          <img src="images/peluche-suerte.jpg" alt="Peluche de la Suerte">
+          <h3>Peluche de la Suerte</h3>
+    </a>
+</article>
+```
+
+Su página de detalle peluche-suerte.html:
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peluche de la Suerte - Regalos Mágicos</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Regalos Mágicos</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../index.html#productos">Productos</a></li>
+                <li><a href="../index.html#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="producto-detalle">
+            <img src="../images/peluche-suerte.jpg" alt="Peluche de la Suerte">
+            <h2>Peluche de la Suerte</h2>
+            <p><strong>Precio:</strong> $24.99</p>
+            <p>El Peluche de la Suerte es un adorable compañero que trae fortuna y alegría a su dueño. Su suave textura y diseño encantador lo convierten en el regalo ideal para cualquier ocasión.</p>
+            <p>"Abraza la buena suerte con este tierno peluche. Un compañero encantador que llenará tu vida de positividad y fortuna."</p>
+            <a href="../index.html">Volver a la tienda</a>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Regalos Mágicos</p>
+        
+    </footer>
+</body>
+</html>
+```
+
+Al modificar el fichero `rss.xml` para el nuevo producto:
+
+```xml
+```
+
+Al actualizar la suscripción en tu cliente de RSS debería aparecer el nuevo producto
