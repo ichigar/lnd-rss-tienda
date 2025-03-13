@@ -19,6 +19,7 @@ Podemos seguir los pasos del mismo cambiando a las ramas en las que se completa 
 - `3-facilitando-subscripcion`
 - `4-validacion-rss`
 - `5-nuevos-productos`
+- `6-github-pages`
 
 ### Trabajando con las ramas en git y GitHub
 
@@ -64,7 +65,7 @@ Partimos de la siguiente estructura de archivos para nuestro proyecto:
     └── reloj-tiempo-eterno.html
 ```
 
-La web de prueba estará alojada en `neocities.org` la URL base de la misma sera <https://ichigar.neocities.org/tienda-regalos>
+La web de prueba estará alojada en `neocities.org` la URL base de la misma sera <https://ichigar.github.io/lnd-rss-tienda>
 
 ## 2. Feed del proyecto
 
@@ -113,26 +114,26 @@ Siguiendo la estructura anterior añadimos a la estructura de nuestro proyecto l
     └── reloj-tiempo-eterno.html
 ```
 
-Teniendo en cuenta que la URL inicial en la que se aloja el proyecto es <https://ichigar.neocities.org/tienda-regalos> el fichero `rss.xml` tendrá el siguiente contenido:
+Teniendo en cuenta que la URL inicial en la que se aloja el proyecto es <https://ichigar.github.io/lnd-rss-tienda> el fichero `rss.xml` tendrá el siguiente contenido:
 
 ```xml
 ?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Tienda de regalos mágicos</title>
-        <link>https://ichigar.neocities.org/tienda-regalos/feed/rss.xml</link>
+        <link>https://ichigar.github.io/lnd-rss-tienda/feed/rss.xml</link>
         <description>Últimos productos disponibles en nuestra tienda de regalos mágicos.</description>
         
         <item>
             <title>Caja de los Sueños</title>
-            <link>https://ichigar.neocities.org/tienda-regalos/regalos/caja-de-los-suenos.html</link>
+            <link>https://ichigar.github.io/lnd-rss-tienda/regalos/caja-de-los-suenos.html</link>
             <description>Una caja misteriosa llena de pequeños obsequios encantadores.</description>
             <pubDate>Fri, 28 Feb 2025 10:00:00 GMT</pubDate>
         </item>
 
         <item>
             <title>Reloj del Tiempo Eterno</title>
-            <link>https://ichigar.neocities.org/tienda-regalos/regalos/reloj-tiempo-eterno.html</link>
+            <link>https://ichigar.github.io/lnd-rss-tienda/regalos/reloj-tiempo-eterno.html</link>
             <description>Un elegante reloj con un diseño clásico y una historia fascinante.</description>
             <pubDate>Fri, 28 Feb 2025 09:30:00 GMT</pubDate>
         </item>
@@ -140,7 +141,7 @@ Teniendo en cuenta que la URL inicial en la que se aloja el proyecto es <https:/
 </rss>
 ```
 
-Una vez añadido el fichero anterior nos podremos suscribir a las novedades de productos de la tienda desde cualquier cliente de RSS introduciendo la dirección: <https://ichigar.neocities.org/tienda-regalos/feed/rss.xml>
+Una vez añadido el fichero anterior nos podremos suscribir a las novedades de productos de la tienda desde cualquier cliente de RSS introduciendo la dirección: <https://ichigar.github.io/lnd-rss-tienda/feed/rss.xml>
 
 ## 3. Facilitando la subscripción
 
@@ -203,21 +204,21 @@ Para que `rss.xml` sea válido debemos añadir elementos de forma que quede:
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <atom:link href="https://ichigar.neocities.org/tienda-regalos/feed/rss.xml" rel="self"
+        <atom:link href="https://ichigar.github.io/lnd-rss-tienda/feed/rss.xml" rel="self"
             type="application/rss+xml" />
         <title>Tienda de regalos mágicos</title>
-        <link>https://ichigar.neocities.org/tienda-regalos/feed/rss.xml</link>
+        <link>https://ichigar.github.io/lnd-rss-tienda/feed/rss.xml</link>
         <description>Últimos productos disponibles en nuestra tienda de regalos mágicos.</description>
         <item>
             <title>Caja de los Sueños</title>
-            <link>https://ichigar.neocities.org/tienda-regalos/regalos/caja-de-los-suenos.html</link>
+            <link>https://ichigar.github.io/lnd-rss-tienda/regalos/caja-de-los-suenos.html</link>
             <description>Una caja misteriosa llena de pequeños obsequios encantadores.</description>
             <guid isPermaLink="false">caja-de-los-suenos</guid>
             <pubDate>Fri, 28 Feb 2025 10:00:00 GMT</pubDate>
         </item>
         <item>
             <title>Reloj del Tiempo Eterno</title>
-            <link>https://ichigar.neocities.org/tienda-regalos/regalos/reloj-tiempo-eterno.html</link>
+            <link>https://ichigar.github.io/lnd-rss-tienda/regalos/reloj-tiempo-eterno.html</link>
             <category>Regalos</category>
             <description>Un elegante reloj con un diseño clásico y una historia fascinante.</description>
             <guid isPermaLink="false">reloj-tiempo-eterno</guid>
@@ -286,7 +287,7 @@ Modificamos el fichero `rss.xml` para el nuevo producto añadiendo el nuevo `ite
 ```xml
         <item>
             <title>Peluche de la suerte</title>
-            <link>https://ichigar.neocities.org/tienda-regalos/regalos/peluche-suerte.html</link>
+            <link>https://ichigar.github.io/lnd-rss-tienda/regalos/peluche-suerte.html</link>
             <category>Regalos</category>
             <description>Un elegante reloj con un diseño clásico y una historia fascinante.</description>
             <guid isPermaLink="false">peluche-suerte</guid>
@@ -295,3 +296,51 @@ Modificamos el fichero `rss.xml` para el nuevo producto añadiendo el nuevo `ite
 ```
 
 Al actualizar la suscripción en tu cliente de RSS debería aparecer el nuevo producto
+
+## 6. Publicando la web en Github Pages
+
+Para publicar la web en GitHubPages en lugar de Neocities tenemos que activar GitHub Pages para el repositorio y modificar los enlaces en el archivo `rss.xml` de forma que apunten a la URL base en GitHub Pages.
+
+Como en este caso mi usuario es `ichigar`y el repositorio se llama `lnd-rss-tienda` la URL inicial de la web de la tienda será <https://ichigar.github.io/lnd-rss-tienda/>
+
+Y el fichero `rss.xml` lo hemos de modificar de forma que quede:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <atom:link href="https://ichigar.github.io/lnd-rss-tienda/feed/rss.xml" rel="self"
+            type="application/rss+xml" />
+        <title>Tienda de regalos mágicos</title>
+        <link>https://ichigar.github.io/lnd-rss-tienda/feed/rss.xml</link>
+        <description>Últimos productos disponibles en nuestra tienda de regalos mágicos.</description>
+        <item>
+            <title>Caja de los Sueños</title>
+            <link>https://ichigar.github.io/lnd-rss-tienda/regalos/caja-de-los-suenos.html</link>
+            <description>Una caja misteriosa llena de pequeños obsequios encantadores.</description>
+            <guid isPermaLink="false">caja-de-los-suenos</guid>
+            <pubDate>Fri, 28 Feb 2025 10:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title>Reloj del Tiempo Eterno</title>
+            <link>https://ichigar.github.io/lnd-rss-tienda/regalos/reloj-tiempo-eterno.html</link>
+            <category>Regalos</category>
+            <description>Un elegante reloj con un diseño clásico y una historia fascinante.</description>
+            <guid isPermaLink="false">reloj-tiempo-eterno</guid>
+            <pubDate>Fri, 28 Feb 2025 09:30:00 GMT</pubDate>
+        </item>
+        <item>
+            <title>Peluche de la suerte</title>
+            <link>https://ichigar.github.io/lnd-rss-tienda/regalos/peluche-suerte.html</link>
+            <category>Regalos</category>
+            <description>Un elegante reloj con un diseño clásico y una historia fascinante.</description>
+            <guid isPermaLink="false">peluche-suerte</guid>
+            <pubDate>Fri, 28 Feb 2025 09:30:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>
+```
+
+Fíjate que se han modificado todos los elemento en los que aparece la dirección URL de los productos a la nueva ubicación.
+
+En el resto de documentos no hay que hacer ningún cambio porque se utilizan enlaces relativos. 
