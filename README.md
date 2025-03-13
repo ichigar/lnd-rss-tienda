@@ -40,13 +40,21 @@ git commit -m "Descripción de modificaciones"
 git push origin nombre-rama
 ```
 
-Una vez terminamos con una rama fusionamos los cambios a la rama `main` y creamos una nueva rama para el paso siguiente:
+Al subir la nueva rama a GitHub se creará un PULL REQUEST para fusionar los cambios a la rama `main`. Accedemos a la web del repositorio en GitHub, aprobamos el PULL REQUEST.
+
+Para que los cambios en `main` se sincronicen en local. Nos cambiamos a la rama `main` y descargamos los cambios con:
 
 ```bash
 git checkout main
-git merge nombre-rama
+git pull
+```
+
+Si necesitamos crear una nueva rama ejecutamos:
+
+```bash
 git checkout -b nueva-rama
 ```
+Y repetimos los pasos anteriores cada vez que terminemos con una rama.
 
 ## 1. Estructura del proyecto
 
