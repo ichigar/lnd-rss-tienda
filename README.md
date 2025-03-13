@@ -18,6 +18,8 @@ Podemos seguir los pasos del mismo cambiando a las ramas en las que se completa 
 - `2-feed-proyecto`
 - `3-facilitando-subscripcion`
 - `4-validacion-rss`
+- `5-nuevos-productos`
+- `6-github-pages`
 
 ### Trabajando con las ramas en git y GitHub
 
